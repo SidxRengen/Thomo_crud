@@ -1,0 +1,30 @@
+.Add{
+    display: inline-grid;
+}
+.Add button{
+    margin: auto;
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+.container {
+   
+    border-radius: 10%;
+    margin-top: 12vh;
+    padding: 5vh 0;
+    width: 60vw;
+    background-color:rgb(219, 238, 238);
+}
+Form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+Form input {
+    width: 500px;
+    height: 40px;
+    border-radius: 2%;
+    font-size: 1.1rem;
+}

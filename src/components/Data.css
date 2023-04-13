@@ -1,0 +1,46 @@
+.Data {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add {
+    margin: 10px 10px;
+    height: 30px;
+    width: 160px;
+    font-size: 1.1rem;
+}
+
+.row {
+    justify-content: center;
+    flex-direction: row;
+    display: grid;
+    font-size: 1.1rem;
+    background-color: rgb(219, 238, 238);
+    grid-template-columns: 350px 350px 350px 350px;
+}
+
+.actions button {
+    margin: 10px 10px;
+    height: 30px;
+    width: 20%;
+    font-size: 1.1rem;
+}
+
+.row div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.row1 {
+    background-color: rgb(143, 152, 152);
+    height: 50px;
+    font-size: 1.4rem;
+}
+a{
+    text-decoration: none;
+}

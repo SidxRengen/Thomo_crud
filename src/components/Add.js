@@ -1,0 +1,61 @@
+import React from "react";
+import { useState } from "react";
+import {useNavigate} from "react-router-dom"
+import axios from "axios";
+import { Link } from "react-router-dom";
+import "./Add.css";
+function Add() {
+  let navigate = useNavigate();
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [contact, setcontact] = useState("");
+  const HandleSubmit=() => {
+    axios.post("https://api.thomso.in/apiV1/assignment",{name,contact,email}).then(() => {
+      navigate('/');
+    });
+  };
+  return (
+    <div className="Add">
+      <button>
+        <Link to="/">Back</Link>
+      </button>
+      <div className="container">
+        <h1>Enter The Details</h1>
+        <form method="post">
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            value={name}
+            onChange={(event) => {
+              setname(event.target.value);
+            }}
+          />
+          <input
+            type="email"
+            name="email"
+            id=""
+            placeholder="Eamil"
+            value={email}
+            onChange={(event) => {
+              setemail(event.target.value);
+            }}
+          />
+          <input
+            type="text"
+            name="contact"
+            id=""
+            placeholder="Contact"
+            value={contact}
+            onChange={(event) => {
+              setcontact(event.target.value);
+            }}
+          />
+          <button type="submit" onClick={HandleSubmit}><Link to="/">Submit</Link></button>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default Add;
